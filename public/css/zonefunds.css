@@ -1,0 +1,81 @@
+body {
+/*css for full size background image*/
+  background: url(../img/wp.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  height: 100%;
+  background-color: #2d89e5;
+  color: #fff;
+  text-align: center;
+
+}
+
+
+
+.layer {
+    background-color: rgba(45, 137, 229, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+ 
+
+.card{
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+	border-radius:0px;
+}
+
+.card:hover{
+	box-shadow: 0 1px 3px rgba(0,0,0,.7);
+}
+
+.border-r-0{
+	border-radius: 15px;
+}
+
+.btn-primary{
+	background-color:#2d89e5;
+}
+
+.text-muted{
+	font-size: 10px;
+}
+
+input{
+	font-size:30px;
+}
+
+.btn-primary{
+  transition: .2s;
+}
+
+
+.btn-primary:hover{
+	background-color:#fff;
+	color:#2d89e5;
+	border-color:#2d89e5;
+
+}
+
+.btn-primary:focus{
+	background-color:#fff;
+	color:#2d89e5;
+	border-color:#2d89e5;
+
+}
+
+.input-group-addon{
+	background-color: #fff;
+}
+
+
+
+
+
+
+

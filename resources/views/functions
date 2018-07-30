@@ -1,0 +1,19 @@
+$('#dropdown-user').click(function(){
+    $('#dropdown_account').slideToggle()
+  });
+
+    $("#errormodal").modal({
+      @if ($errors->any())
+        show:true
+      @else
+        show:false
+      @endif
+    }); 
+
+   /* $('.delete').on('submit', function(){
+      return confirm('Are you sure?');
+    });*/
+    $('#sort_options').slideDown(200);
+    $('#feed').hide();
+    $('#feed').fadeIn(1000);
+    $(document).ready();

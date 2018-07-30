@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/fv.ico">
+    <title>ZoneFunds</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  </head>
+  <body class="" style="background-color: #f0f0f0">
+
+
+
+
+    <!-- NEW POST ZA MOBITELE -->
+    <a style="" data-toggle="modal" data-target="#myModal">
+    <div class ="phonepost hidden-md-up">
+      <div class="nav-item" style="right: -14px; bottom:-14px; position: relative;">
+        <img src="img/newpost.png" id="newpost" width="40px">
+      </div>
+    </div>
+    </a>
+    <!-- ////NEW POST ZA MOBITELE -->
+
+
+
+
+
+    <!-- SETTINGS ZA MOBITELE -->
+    <div class ="phonesettings hidden-md-up">
+      <div class="nav-item" style="left: 14px; bottom:-19px; position: relative;">
+        <img src="img/settings.png" id="newpost" width="40px"></a>
+      </div>
+    </div>
+    <!-- ///SETTINGS ZA MOBITELE -->
+
+
+
+
+
+
+
+    <!--NORMAL NAVBAR -->
+    <div class="nav navbar navbar-light bg-faded hidden-sm-down">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/reverseheadersmall.png" width="250px" class="d-inline-block align-top" alt="">
+        </a>
+        <a href="#">
+          <div class="navbar-brand float-xs-right pt-2 m-0">
+            <img src="img/usererda.jpg" width="30px" class="d-inline-block align-top img-fluid rounded" alt="">
+          </div>
+          <p class="lead float-xs-right pt-2 pr-1">Antonio</p>
+        </a>
+        </div>
+    </div>
+    <!-- ////NORMAL NAVBAR-->
+
+
+
+
+    <!--PHONE NAVBAR (CENTERED HEADER) -->
+    <div class="nav navbar navbar-light bg-faded hidden-md-up mb-3">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="left: 50%; position: relative; transform: translateX(-50%);">
+          <img src="img/reverseheadersmall.png" width="250px" class="d-inline-block align-top" alt="">
+        </a>
+      </div>
+    </div>
+    <!--////PHONE NAVBAR (CENTERED HEADER) -->
+
+
+
+
+    <!--NORMAL POST/MESSAGES/SORT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 offset-md-9 hidden-sm-down">
+          <div class="nav navbar navbar-light mb-3" style="background:#2d89e5; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                    <ul class="nav navbar-nav">
+                    <div class="nav-item">
+                      <a class="nav-link" style="" href="#home" data-toggle="modal" data-target="#myModal"><img src="img/newpost.png" id="newpost" width="30px"></a>
+                    </div>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="nav navbar-nav">
+                    <div class="nav-item">
+                      <a class="nav-link" style="" href="#home" data-toggle="modal" data-target="#myModal"><img src="img/message.png" id="newpost" width="30px"></a>
+                    </div>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="nav navbar-nav">
+                    <div class="nav-item">
+                      <a class="nav-link" href="#home" data-toggle="modal" data-target="#myModal"><img src="img/top.png" id="newpost" width="30px"></a>
+                    </div>
+                    </ul>
+                </div>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <!--/////NORMAL POST/MESSAGES/SORT -->
+
+    
+
+
+
+    <!--POCETAK MODALA ZA STVARANJE POSTOVA-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Create an ad</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <form action="{{ route('ad.create') }}" method="post">
+                      <input type="text" class="form-control mb-1" name="ad_title" placeholder="Nudim popravak računala.">
+                      <textarea class="form-control mb-1" rows="5" name="ad_body" placeholder="Popraviti ću bilo koji problem sa računalom ili laptopom, software i hardware."></textarea>
+                      <div class="input-group mb-1">
+                        <span class="input-group-addon" id="sizing-addon2"><img src="img/contact.png" height="17px"></span>
+                        <input type="text" class="form-control" name="ad_contact" placeholder="282128376" aria-describedby="sizing-addon2">
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-addon" id="pricemodal"><img src="img/price.png" height="17px"></span>
+                        <input type="text" class="form-control" name="ad_price" placeholder="100kn" aria-describedby="pricemodal">
+                      </div>
+                      <button type="submit" >Publish</button>
+                      <input type="hidden" name="_token" value="{{ Session::token() }}">
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--/////MODAL ZA STVARANJE POSTOVA-->
+
+
+
+
+    
+
+
+
+    <!--MODAL ZA PRIKAZAT POST-->
+    <div class="modal fade " id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabe2" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header m-0 p-0 pt-2 pr-2" style="border: none;">
+            <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><h1>&times;</h1></span>
+            </button>
+          </div>
+          <div class="modal-body">
+                  <div class="card">
+                    <img class="card-img-top img-fluid" src="img/wp.gif" alt="Card image cap">
+                    <div class="card-block">
+                      <h4 class="card-title">Nudim Prijevoz</h4>
+                      <p class="card-text">Vozim do 30km.</p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="border-radius:0px;">
+                      <div class="input-group" style="border-radius:0px;">
+                        <span style="border-radius:0px;" class="input-group-addon" id="basic-addon2"><img src="img/contact.png" style="border-radius:0px;" height="17px" width="20" class=""></span>
+                        <li class="list-group-item" aria-describedby="basic-addon2" style="border-radius:0px;">0912542001</li>
+                      </div>
+                      <div class="input-group" style="border-radius:0px;">
+                      <span style="border-radius:0px;" class="input-group-addon" id="basic-addon2"><img src="img/price.png" style="border-radius:0px;" height="17px" width="20" class=""></span>
+                        <li class="list-group-item" style="border-radius:0px;"">50kn</li>
+                      </div>
+                      <div class="input-group" style="border-radius:0px;">
+                      <span style="border-radius:0px;" class="input-group-addon" id="basic-addon2"><img src="img/location.png" style="border-radius:0px;" height="20px" width="20" class=""></span>
+                      <li class="list-group-item" style="border-radius:0px;">Rijeka, Croatia</li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+                  </div>
+        </div>
+      </div>
+    <!--/////MODAL ZA PRIKAZAT POST-->
+
+
+
+
+
+
+    <!--FEED-->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6">
+
+          <a data-toggle="modal" data-target="#myModal2" style="text-decoration:none;"><div class="card">
+            <img class="card-img-top img-fluid" src="img/vozim.jpg" style="border-radius:0px;" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Nudim Prijevoz</h4>
+              <p class="card-text">Vozim do 30km.</p>
+            </div>
+            <ul class="list-group list-group-flush" style="border-radius:0px;">
+              <div class="input-group" style="border-radius:0px; color: #2d89e5;">
+                <span style="border-radius:0px;" class="input-group-addon" id="basic-addon2"><img src="img/contact.png" style="border-radius:0px;" height="17px" width="20" class=""></span>
+                <li class="list-group-item" aria-describedby="basic-addon2" style="border-radius:0px;">0912542001</li>
+              </div>
+              <div class="input-group" style="border-radius:0px;">
+              <span style="border-radius:0px;" class="input-group-addon" id="basic-addon2"><img src="img/price.png" style="border-radius:0px;" height="17px" width="20" class=""></span>
+                <li class="list-group-item" style="border-radius:0px; color: #2d89e5;"">50kn</li>
+              </div>
+              <div class="input-group" style="border-radius:0px;">
+              <span style="border-radius:0px;" class="input-group-addon" id="basic-addon2"><img src="img/location.png" style="border-radius:0px;" height="20px" width="20" class=""></span>
+              <li class="list-group-item" style="border-radius:0px; color: #2d89e5;">Rijeka, Croatia</li>
+              </div>
+            </ul>
+          </div></a>
+        </div>
+
+
+        <div class="col-md-12 hidden-md-up" style="background-color:#f7f7f7">
+
+          <hr>
+
+        </div>
+
+
+      <div class="col-md-6">
+        <div class="card">
+            <img class="card-img-top img-fluid" style="border-radius:0px;" src="img/wa.gif" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Radim vektorske animacije</h4>
+              <p class="card-text">Može potrajati i do 3 tjedna</p>
+            </div>
+            <ul class="list-group list-group-flush" style="border-radius:0px;">
+              <div class="input-group" style="border-radius:0px;">
+                <span style="border-radius:0px;" class="input-group-addon" id="basic-addon2"><img src="img/contact.png" style="border-radius:0px;" height="17px" width="20" class=""></span>
+                <li class="list-group-item" aria-describedby="basic-addon2" style="border-radius:0px; color: #2d89e5;">0989877825</li>
+              </div>
+              <div class="input-group" style="border-radius:0px;">
+              <span style="border-radius:0px;" class="input-group-addon" id="basic-addon2"><img src="img/price.png" style="border-radius:0px;" height="17px" width="20" class=""></span>
+                <li class="list-group-item" style="border-radius:0px; color: #2d89e5;"">20kn</li>
+              </div>
+              <div class="input-group" style="border-radius:0px;">
+              <span style="border-radius:0px;" class="input-group-addon" id="basic-addon2"><img src="img/location.png" style="border-radius:0px;" height="20px" width="20" class=""></span>
+              <li class="list-group-item" style="border-radius:0px; color: #2d89e5;">Rijeka, Croatia</li>
+              </div>
+            </ul>
+          </div>
+
+      </div>
+
+    </div>
+
+    <!--/////KRAJ FEEEDA-->
+
+
+
+
+
+<style type="text/css">
+
+.btn-primary{
+  transition: .2s;
+  background-color: #2d89e5 ;
+}
+
+
+.btn-primary:hover{
+  background-color:#fff;
+  color:#2d89e5;
+  border-color:#2d89e5;
+
+}
+
+.btn-primary:focus{
+  background-color:#fff;
+  color:#2d89e5;
+  border-color:#2d89e5;
+
+}
+
+
+a{
+  text-decoration:none;
+  cursor: pointer;
+}
+
+.phonepost{
+  width: 70px; 
+  height: 70px; 
+  background: #2d89e5; 
+  -moz-border-radius: 50px; 
+  -webkit-border-radius: 50px; 
+  border-radius: 50px;
+  position:fixed !important; 
+  bottom: 0 !important;
+  right: 0 !important;
+  margin-right: 10px;
+  margin-bottom: 10px !important;
+  z-index: 1 !important; 
+  box-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+
+.phonesettings{
+  width: 70px; 
+  height: 70px; 
+  background: #2d89e5; 
+  -moz-border-radius: 50px; 
+  -webkit-border-radius: 50px; 
+  border-radius: 50px;
+  position:fixed !important; 
+  bottom: 0 !important;
+  left: 0 !important;
+  margin-left: 10px;
+  margin-bottom: 10px !important;
+  z-index: 1 !important; 
+  box-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+
+#newpost{
+  transition: .2s;
+}
+
+#newpost:hover{
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+
+.input-group-addon{
+  background-color: #fff;
+  border-left-style: hidden;
+}
+
+
+
+.input-group{
+  border-radius:0px;
+}
+
+.list-group-item
+{
+    border-radius:0px;
+}
+
+.btn-primary{
+  transition: .2s;
+}
+
+.btn-primary:hover{
+  background-color:#fff;
+  color:#2d89e5;
+  border-color:#2d89e5;
+
+}
+
+.btn-primary:focus{
+  background-color:#fff;
+  color:#2d89e5;
+  border-color:#2d89e5;
+
+}
+
+#test{
+  border-radius:0px;
+  width:200px;
+}
+
+.card{
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  transition: .2s;
+  border-radius: 0px;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+
+.navbar{
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+  #sidebar{
+    height:100vh;
+    width:200px;
+
+  }
+</style>
+
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+  </body>
+</html>
